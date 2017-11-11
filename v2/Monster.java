@@ -27,11 +27,11 @@ public class Monster extends Character {
       still alive. True if so, false otherwise.
     ========================================*/
     public boolean isAlive() {
-	boolean retBoo = true;
 	if (HP <= 0) {
-	    retBoo = false;
-	}
-	return retBoo;
+	    return = false;
+	}else{
+	    return true;
+         }
     }
     public int getDefense() {
 	return defense; //returns Monster's defense
