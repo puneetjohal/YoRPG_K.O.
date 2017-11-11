@@ -1,21 +1,21 @@
 //Team K.O.
 //Team Roster -- Puneet Johal, Ahnaf Hasan
 //APCS1 pd1
-//HW28 -- Ye Olde Role Playing Game
-//2017-11-08
+//HW30 -- Ye Olde Role Playing Game, Improved
+//2017-11-10
 
-public class Protagonist extends Character {
+public class Protagonist extends Character{
     public String name; 
     public int HP;
     public int strength;
     public int defense;
     public double atkRating;
     /*=========================================
-    Default Constructor:
-    Sets a generic name, HP to 100, strength to
-    40, defense to 40, and the attack rating to
-    0.4 .
-    ==========================================*/
+      Default Constructor:
+      Sets a generic name, HP to 100, strength to
+      40, defense to 40, and the attack rating to
+      0.4 .
+      ==========================================*/
     public Protagonist() {
 	name = "Warrior";
 	HP = 100;
@@ -32,7 +32,7 @@ public class Protagonist extends Character {
       isAlive():
       returns true if the person in question is
       still alive, false otherwise.
-    ==========================================*/
+      ==========================================*/
     public boolean isAlive() {
 	boolean retBoo = true;
 	if (HP <= 0) {
