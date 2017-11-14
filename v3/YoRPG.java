@@ -1,3 +1,9 @@
+//Team K.O.
+//Team Roster -- Puneet Johal, Ahnaf Hasan
+//APCS1 pd1
+//HW28 -- Ye Olde Role Playing Game
+//2017-11-08
+
 /**********************************************
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
@@ -51,7 +57,7 @@ public class YoRPG
   public void newGame()
   {
     String s;
-    String name = "";
+    String name = "", type = "";
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -74,8 +80,25 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+    //allow player to choose class
+    s = "Choose your destiny, protagonist: Mage, Jedi, or Assassin? ";
+    System.out.print( s );
+
+    try {
+	type = in.readLine();
+    }
+    catch ( IOException e ) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if (type.equals("Mage")) {
+	Protagonist pat = new Mage( name );
+    }
+    if (type.equals("Jedi")) {
+	Protagonist pat = new Jedi( name );
+    }
+    if (type.equals("Assassin")) {
+	Protagonist pat = new Assassin( name );
+    }
 
   }//end newGame()
 
@@ -155,7 +178,7 @@ public class YoRPG
     //As usual, move the begin-comment bar down as you progressively 
     //test each new bit of functionality...
 
-  
+    /*================================================
     //loading...
     YoRPG game = new YoRPG();
 
@@ -169,7 +192,6 @@ public class YoRPG
     }
 
     System.out.println( "Thy game doth be over." );
-      /*================================================
 	  ================================================*/
   }//end main
 

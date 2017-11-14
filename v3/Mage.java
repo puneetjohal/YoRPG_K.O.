@@ -17,10 +17,15 @@ public class Mage extends Protagonist{
     }
 
     //overloaded constructor
-    public Mage(String nameVal, int manaVal){
+    public Mage(String nameVal){
+	this();
 	name = nameVal;
+    }
+
+    //overloaded constructor 2
+    public Mage(String nameVal, int manaVal){
+	this(nameVal);
 	mana = manaVal;
-	defense = 60;
     }
 
     //methods

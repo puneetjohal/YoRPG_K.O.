@@ -17,12 +17,17 @@ public class Assassin extends Protagonist{
     }
 
     //overloaded constructor
-    public Assassin(String nameVal, int sneakVal){
+    public Assassin(String nameVal){
+	this();
 	name = nameVal;
-	sneak = sneakVal;
-	atkRating = 0.75;
     }
 
+    //overloaded constructor 2
+    public Assassin(String nameVal, int sneakVal){
+	this(nameVal);
+	sneak = sneakVal;
+    }
+    
     //methods
 
     //about

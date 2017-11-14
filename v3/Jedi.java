@@ -17,10 +17,15 @@ public class Jedi extends Protagonist{
     }
 
     //overloaded constructor
-    public Jedi(String nameVal, int forceVal){
+    public Jedi(String nameVal){
+	this();
 	name = nameVal;
+    }
+
+    //overloaded constructor 2
+    public Jedi(String nameVal, int forceVal){
+	this(nameVal);
 	force = forceVal;
-	strength = 60;
     }
 
     //methods
