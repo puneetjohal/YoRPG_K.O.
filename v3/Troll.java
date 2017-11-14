@@ -1,9 +1,10 @@
 public class Troll extends Monster {
     public Troll() {
 	super();
-	HP = 150;
-	defense = 25;
-	atkRating = 1.2;
+    }
+    public String about() {
+	String s = "There stands before you a Troll. Often delegated to the grunt work of the all monsters, Trolls are impressive in their own sense. Most Trolls have superhumane strength by birth, only strengthened by their arduous work in the mines. With a stature of 6'7\", they can easily \"mistake\" your skull for a precious metal. Be wary of what you look like...";
+	return s;
     }
     public boolean isAlive() {
 	return super.isAlive();
