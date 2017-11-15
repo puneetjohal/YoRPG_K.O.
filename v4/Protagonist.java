@@ -56,4 +56,5 @@ public abstract class Protagonist {
     }
     public abstract void specialize();
     public abstract void normalize();
+    public abstract String about();
 }

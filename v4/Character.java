@@ -36,7 +36,7 @@ public class Character{
       is still alive, false otherwise.
       ==========================================*/
     public boolean isAlive() {
-	if (HP <= 0) {
+	if (HP >= 0) {
 	    return false;
 	}
 	return true;
@@ -77,36 +77,36 @@ public class Character{
 	return damage;
     }
 
-    //main
-    public static void main(String[] args){
-	Character Dragonborn = new Character();
-	System.out.println("Character has been spawned.");
-	System.out.println();
+    // //main
+    // public static void main(String[] args){
+    // 	Character Dragonborn = new Character();
+    // 	System.out.println("Character has been spawned.");
+    // 	System.out.println();
 	
-	System.out.println("Are you alive?");
-	System.out.println(Dragonborn.isAlive()); //true
-	System.out.println();
+    // 	System.out.println("Are you alive?");
+    // 	System.out.println(Dragonborn.isAlive()); //true
+    // 	System.out.println();
 	
-	System.out.println("Cool. What's your defense?");
-	System.out.println(Dragonborn.getDefense()); //20
-	System.out.println();
+    // 	System.out.println("Cool. What's your defense?");
+    // 	System.out.println(Dragonborn.getDefense()); //20
+    // 	System.out.println();
 	
-	Dragonborn.lowerHP(50);
-	System.out.println("Dragonborn has been struck by lightning. HP -50");
-	System.out.println("You good bro?");
-	System.out.println(Dragonborn.isAlive()); //true
-	System.out.println();
+    // 	Dragonborn.lowerHP(50);
+    // 	System.out.println("Dragonborn has been struck by lightning. HP -50");
+    // 	System.out.println("You good bro?");
+    // 	System.out.println(Dragonborn.isAlive()); //true
+    // 	System.out.println();
 	
-	System.out.println("Hey you should be more - wait that's dangerous! You'll hurt yourself!");
-	Dragonborn.attack(Dragonborn);
-	System.out.println("Dragonborn has inflicted damage on themselves. HP -80");
-	System.out.println();
+    // 	System.out.println("Hey you should be more - wait that's dangerous! You'll hurt yourself!");
+    // 	Dragonborn.attack(Dragonborn);
+    // 	System.out.println("Dragonborn has inflicted damage on themselves. HP -80");
+    // 	System.out.println();
 	
-	System.out.println("Yikes are you ok?");
-	System.out.println(Dragonborn.isAlive()); //false
-	System.out.println();
+    // 	System.out.println("Yikes are you ok?");
+    // 	System.out.println(Dragonborn.isAlive()); //false
+    // 	System.out.println();
 	
-	System.out.println("And thus the Dragonborn's tale comes to an end.");
-    }//end main
+    // 	System.out.println("And thus the Dragonborn's tale comes to an end.");
+    // }//end main
 }//end class
     

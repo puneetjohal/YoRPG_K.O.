@@ -91,13 +91,13 @@ public class YoRPG
 
     //instantiate the player's character
     if (type.equals("Mage")) {
-	Protagonist pat = new Mage( name );
+	pat = new Mage( name );
     }
     if (type.equals("Jedi")) {
-	Protagonist pat = new Jedi( name );
+	pat = new Jedi( name );
     }
     if (type.equals("Assassin")) {
-	Protagonist pat = new Assassin( name );
+	pat = new Assassin( name );
     }
 
   }//end newGame()
@@ -126,12 +126,12 @@ public class YoRPG
         // Give user the option of using a special attack:
         // If you land a hit, you incur greater damage,
         // ...but if you get hit, you take more damage.
-        try {
+		try {
           System.out.println( "\nDo you feel lucky?" );
           System.out.println( "\t1: Nay.\n\t2: Aye!" );
           i = Integer.parseInt( in.readLine() );
-        }
-        catch ( IOException e ) { }
+		}
+	  catch ( IOException e ) { }
 
         if ( i == 2 )
           pat.specialize();
@@ -178,7 +178,7 @@ public class YoRPG
     //As usual, move the begin-comment bar down as you progressively 
     //test each new bit of functionality...
 
-    /*================================================
+    
     //loading...
     YoRPG game = new YoRPG();
 
@@ -192,6 +192,8 @@ public class YoRPG
     }
 
     System.out.println( "Thy game doth be over." );
+    System.out.println( "Also the SOPs in thy while loop be non-functioning. Makes a person wonder." );
+    /*================================================
 	  ================================================*/
   }//end main
 
