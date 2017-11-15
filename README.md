@@ -1,5 +1,6 @@
 # YoRPG_K.O.
 YoRPG
+Roster: Ahnaf Hasan, Puneet Johal
 
 ## Rundown of Classes
 
