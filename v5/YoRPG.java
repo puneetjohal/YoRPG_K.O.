@@ -188,6 +188,7 @@ public class YoRPG
 		try {
 		    System.out.println("Do you equip?");
 		    System.out.println("1:Ye\t2:Nay");
+		    System.out.print("Selection:");
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch (IOException e) { }
