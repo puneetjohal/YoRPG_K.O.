@@ -192,7 +192,6 @@ public class YoRPG
     }
 
     System.out.println( "Thy game doth be over." );
-    System.out.println( "Also the SOPs in thy while loop be non-functioning. Makes a person wonder." );
     /*================================================
 	  ================================================*/
   }//end main
