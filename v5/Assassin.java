@@ -83,6 +83,11 @@ public class Assassin extends Protagonist{
 	       "\nSneak: " + sneak;
     }
 
+    // //HP accessor
+    // public int getHP(){
+    // 	return super.getHP();
+    // }
+
     //main
     public static void main(String args[]){
 	Assassin Char = new Assassin();

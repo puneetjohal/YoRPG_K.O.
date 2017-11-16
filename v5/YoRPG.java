@@ -116,8 +116,8 @@ public class YoRPG
     =============================================*/
   public boolean playTurn()
   {
-    int i = 1;
-    int d1, d2;
+      int i = 1, x = 0;
+      int d1, d2;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
@@ -133,11 +133,37 @@ public class YoRPG
         // ...but if you get hit, you take more damage.
 		try {
           System.out.println( "\nDo you feel lucky?" );
-          System.out.println( "\t1: Nay.\n\t2: Aye!" );
+          System.out.println( "\t1: Nay.\n\t2: Aye! \n\t3: Open Inventory" );
           i = Integer.parseInt( in.readLine() );
 		}
 	  catch ( IOException e ) { }
 
+		if ( i == 3) {
+		    while ( x != 2 ) {
+			try {
+			    System.out.println( Inventory.getInventory() );
+			    System.out.println();
+			    System.out.println( "Hit 1 to use potion." );
+			    System.out.println( "Hit 2 to go back." );
+			    x = Integer.parseInt( in.readLine() );
+			}
+			catch ( IOException e ) { }
+			if (x == 1 && Inventory.getPotions() == 0){
+			    System.out.println();
+			    System.out.println( "No health potions available. Tough luck..." );
+			    System.out.println();
+			}
+			if (x == 1 && Inventory.getPotions() > 0){
+			    pat.usePotion();
+			    Inventory.setNumPotions(-1);
+			    System.out.println();
+			    System.out.println( "Health potion consumed. HP: " + pat.getHP());
+			    System.out.println();
+			}
+		    }
+		    continue;
+		} //Shows you inventory + option of consuming potion and then skips one iteration of the loop, bringing you back to the fight
+		    
         if ( i == 2 )
           pat.specialize();
         else
@@ -150,7 +176,8 @@ public class YoRPG
                             " points of damage.");
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-                            " for " + d2 + " points of damage.");
+                            " for " + d2 + " points of damage." +
+			    "\n" + pat.getName() + "'s HP is now " + pat.getHP() + "." );
 	    }//end while
 
 	    //option 1: you & the monster perish
@@ -179,6 +206,7 @@ public class YoRPG
 		catch (IOException e) { }
 		if (i == 1) {
 		    pat.atkRating += knife.weapVal;
+		    Inventory.setKnives();
 		}else{
 		}
 	    }else{
@@ -194,9 +222,18 @@ public class YoRPG
 		catch (IOException e) { }
 		if (i == 1) {
 		    pat.atkRating += hammer.weapVal;
+		    Inventory.setHammer();
 		}else{
 		}
 	    }
+	}
+        if ( Math.random() <= ( difficulty / 3.0 ) ) {
+	    Inventory.setNumPotions(1);
+	    System.out.println("\nYou have acquired 1 health potion.");
+	}
+	if ( Math.random() <= ( difficulty / 6.0 ) ) {
+	    Inventory.setNumPotions(2);
+	    System.out.println("\nYou have acquired 2 health potions.");
 	}
         return true;
 	    }

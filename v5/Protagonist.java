@@ -56,6 +56,12 @@ public abstract class Protagonist {
 	evilName.lowerHP(damage); //lower the HP of the Monster
 	return damage; //return the damage to be printed
     }
+    public int getHP(){
+	return HP;
+    }
+    public void usePotion(){
+	HP += 20;
+    }
     public abstract void specialize();
     public abstract void normalize();
 }

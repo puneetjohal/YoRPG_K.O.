@@ -3,43 +3,20 @@ public class Mage extends Protagonist {
     
     public Mage() {
 	name = "Mage";
-	HP = 80;
-	strength = 60;
-	defense = 20;
-	atkRating = 0.6;
-	oldAtkR = 0.6;
+	HP = 100;
+	strength = 40;
+	defense = 40;
+	atkRating = 0.4;
+	oldAtkR = 0.4;
     }
     
     public Mage(String pName) {
 	this();
 	name = pName;
     }
-    
-    public boolean isAlive() {
-	if (HP <= 0) {
-	    return false;
-	}else{
-	    return true;
-	}
-    }
-    
-    public int getDefense() {
-	return defense;
-    }
-    
+
     public String getName() {
-	return name;
-    }
-    
-    public int lowerHP(int damage) {
-	HP -= damage;
-	return HP;
-    }
-    
-    public int attack(Monster enemy) {
-	int damage = (int) ((strength * atkRating) - enemy.getDefense());
-	enemy.lowerHP(damage);
-	return damage;
+	return name; //returns the name of the person
     }
     
     public void specialize() { //special attack

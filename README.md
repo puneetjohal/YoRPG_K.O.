@@ -1,6 +1,6 @@
 # YoRPG_K.O.
 YoRPG
-Roster: Ahnaf Hasan, Puneet Johal
+####Roster: Ahnaf Hasan, Puneet Johal
 
 ## Rundown of Classes
 
@@ -46,6 +46,22 @@ Roster: Ahnaf Hasan, Puneet Johal
 * Werewolves
   * Subclass of Monster 
   * Monster with a lower HP and defense, but increased attack rating.
+
+* Weapons
+  * Abstract class that holds abstract methods for use in subclasses
+
+* Hammer
+  * Subclass of Weapons
+  * Random chance of aquiring after slaying monster
+  * Attribute weapVal added to atkRating of Pat if picked up by Pat
+
+* Knives
+  * Subclass of Weapons
+  * Random chance of aquiring after slaying monster
+  * Attribute weapVal added to atkRating of Pat if picked by Pat
+
+* Inventory
+  * Stores information about which weapon is available and how many potions Pat has aquired
 
 ### All In-game Characters
 Character Name | Type | HP | strength | defense | attack | Special

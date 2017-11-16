@@ -82,6 +82,11 @@ public class Jedi extends Protagonist{
 	       "\nForce: " + force;
     }
 
+    // //HP accessor
+    // public int getHP(){
+    // 	return super.getHP();
+    // }
+
     //main
     public static void main(String args[]){
 	Jedi Char = new Jedi();
