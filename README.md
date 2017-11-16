@@ -2,6 +2,23 @@
 YoRPG
 #### Roster: Ahnaf Hasan, Puneet Johal
 
+## Instructions
+Hello young protagonist. I see you have finally awoken from your slumber. As you will soon come to discover, the world as you know it has changed radically and has descended into chaos. Monsters run rampant where people once lived, and it is your duty, oh chosen hero, to restore order to this world.
+You will choose a class, each with its unique powers and abilities.
+You will fight monsters, some truly formidable no doubt, but not invincible.
+You will find new weapons and potions that can be used to improve your abilities.
+The fate of the world now rests in your hands, hero.
+
+## Feature Additions
+* Inventory: Displays what weapons you have aquired and the ammount of potions available for use.
+* Weapons: Each monster you defeat has a random chance of dropping a weapon, which can be used to improve your attack rating.
+* Potions: Each monster you defeat also has a random chance of dropping up to 3 potions, which can be accessed from your inventory and used to increase HP by 20 points.
+
+## Code Restructuring
+* Added additional while loop inside method playTurn in class YoRPG in order to allow player to view inventory and access potions during a battle.
+* Added randomly called conditionals under success in playTurn to simulate mob drops.
+* Added try/catch in newGame method to allow player to manually select their preferred subclass of Protagonist.
+
 ## Rundown of Classes
 
 * YoRPG
